@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>604</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="select_proc_Button">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>80</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SelectProcess</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SelectedProcess</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="selected_process_textButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PID</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="PID_text_Button">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="inject_button">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>420</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Inject</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="injection_method_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>171</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>LoadLibrary</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>LdrLoadDll</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>LdrpLoadDll</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>LdrpLoadDllInternal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ManualMap</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>460</y>
+      <width>601</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>440</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MadConsole</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>30</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Selected DLL</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="selected_dll_text">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>50</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="browse_dll_button">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>80</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse DLL</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="exec_methods_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>171</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>CreateRemoteThread</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>NtCreateThreadEx</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SetWindowsHook</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ThreadHijack</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>QueueUserAPC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>KernelCallbackTable</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>VectoredExceptionHandler</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ThreadPool</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>InstrumentationCallback</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>TlsCallback</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTextEdit" name="Arch_textButton">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>80</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ARCH</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Injection Method</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Execution Method</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CheckBox_TSAS">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>140</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ThreadStartAddressSpoof</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_THFD">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>160</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ThreadHideFromDebugger</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_TSTA">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>180</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ThreadSkipThreadAttach</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_DebugConsole">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>420</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EnableDebugConsole</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_HandleHijack">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HandleHijack</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ExceptionSupport">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>140</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exception Support</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="SecurityCookie">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>160</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Security Cookie</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="BoundImports">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>180</y>
+      <width>301</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Handle Bound Imports</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DelayedImports">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>200</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Handle Delayed Imports</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TLS">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>220</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Handle TLS</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="SystemProcessOnly">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>System Process Only</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ModuleUnlinker">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Unlink Module</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ModuleModification">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Allow Module Modifiaction</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteBoundImports">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>310</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Bound Imports</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteImports">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>330</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Imports</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteRelocations">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>350</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Relocations</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteResources">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>310</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Resources</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteExportTable">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>330</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Export Table</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteTLS">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>350</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete TLS</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteDebugData">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>370</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Debug Data</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteDOSHeader">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>370</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete DOS Header</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeletePEHeader">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>390</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete PE Header</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteRichHeader">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>410</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Rich Header</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DeleteDOSStub">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>390</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete DOS Stub</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UnloadMappedDll">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>80</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Unload Mapped Dll</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="RelocRemove">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove Section .reloc</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="RsrcRemove">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove Section .rsrc</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="PdataRemove">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove Section .pdata</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPWorkerThreadEntry">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>140</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPWorkerThreadEntry</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPWorkInsert">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>160</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPWorkInsert</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPJobInsert">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>180</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPJobInsert</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPDirect">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>200</y>
+      <width>78</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPDirect</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPWait">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>220</y>
+      <width>78</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPWait</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPTimer">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>240</y>
+      <width>78</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPTimer</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPIo">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>260</y>
+      <width>78</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPIo</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TPAlpc">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>280</y>
+      <width>78</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TPAlpc</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SaveButton">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ResetButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>80</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="unlink_module_internal">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Unlink Module</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>select_proc_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SelectProcessClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>24</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inject_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>Inject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>448</x>
+     <y>362</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>474</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_dll_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>BrowseDLL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ModuleUnlinker</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>UnlinkModule()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>313</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>16</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UnloadMappedDll</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>UnloadMappedDll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>521</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SaveButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SaveCurrentSettings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>440</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>LoadSettings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>424</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ResetButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>DefaultSettings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>571</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>584</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>SelectProcessClicked()</slot>
+  <slot>Inject()</slot>
+  <slot>BrowseDLL()</slot>
+  <slot>UnlinkModule()</slot>
+  <slot>UnloadMappedDll()</slot>
+  <slot>SaveCurrentSettings()</slot>
+  <slot>LoadSettings()</slot>
+  <slot>DefaultSettings()</slot>
+ </slots>
+</ui>
