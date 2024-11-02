@@ -29,9 +29,9 @@ IV. [ Credits](#-Credits)
 Also Note this will be the only repository containing the compiled binaries for the Library and the GUI application 
 so if your here to just use the Injector then this is the right place! 
 
-The Injector is focues on x64 targets however some basic features do work on x86 as well. 
+The Injector is focused on x64 targets however some basic features do work on x86 as well. 
 
-Also note this was only tested on Windows 11 Version 23H2 Build 22631.4317 however it should also work with older Version as well as with Windows 10 but I can not gurantee every feature working on it.
+Also note this was only tested on Windows 11 Version 23H2 Build 22631.4317 however it should also work with older Version as well as with Windows 10, but I can not guarantee every feature working on it.
 
 <img src="https://github.com/user-attachments/assets/3199c267-e470-4582-97df-293885416847" style="margin: -80px 0 0 80px;">
 
@@ -118,7 +118,7 @@ Also note this was only tested on Windows 11 Version 23H2 Build 22631.4317 howev
 ###  Installation
 
 **Simply Download the Zip file and run MadInjector.exe which requires UAC.
-Note this is only a stub the real executable is inside the Release Folder however I highly recommend using the Stub since it hides all of the ugly files**
+Note this is only a stub the real executable is inside the Release Folder however I highly recommend using the Stub since it hides all the ugly files**
 
 ##  License
 This project is protected under the [MIT-LICENSE]([https://choosealicense.com/licenses](https://choosealicense.com/licenses/mit/)) License. For more details, refer to the [LICENSE]([https://choosealicense.com/licenses/](https://github.com/rickmad11/MadInjector-GUI/blob/master/LICENSE)) file.
