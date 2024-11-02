@@ -33,7 +33,7 @@ The Injector is focues on x64 targets however some basic features do work on x86
 
 Also note this was only tested on Windows 11 Version 23H2 Build 22631.4317 however it should also work with older Version as well as with Windows 10 but I can not gurantee every feature working on it.
 
-<img src="https://github.com/user-attachments/assets/214e9834-3d73-4d32-97cf-95000cc4e17f" style="margin: -80px 0 0 80px;">
+<img src="https://github.com/user-attachments/assets/3199c267-e470-4582-97df-293885416847" style="margin: -80px 0 0 80px;">
 
 ---
 
