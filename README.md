@@ -33,6 +33,8 @@ The Injector is focused on x64 targets however some basic features do work on x8
 
 Also note this was only tested on Windows 11 Version 23H2 Build 22631.4317 however it should also work with older Version as well as with Windows 10, but I can not guarantee every feature working on it.
 
+Oh, I almost forgot to say this, it was my first time doing anything in Qt therefore the code turned out to be terrible, but it works and that is everything I wanted to achieve.
+
 <img src="https://github.com/user-attachments/assets/3199c267-e470-4582-97df-293885416847" style="margin: -80px 0 0 80px;">
 
 ---
