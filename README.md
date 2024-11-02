@@ -95,17 +95,17 @@ Also note this was only tested on Windows 11 Version 23H2 Build 22631.4317 howev
 
 ❯ LdrpLoadDllInternal
 
-❯ Manual Map -> please view the picture for all of the options
+❯ Manual Map x64 -> please view the picture for all of the options
 
 **Additional Features:**
 
--> Handle Hijacker x64 -> Symstem Process only (this is a optional flag)
+-> Handle Hijacker x64 -> System Process only (this is a optional flag)
 
--> Unlink Module Button -> can be any module all the Injector needs is the Path to the already loaded Module
+-> Unlink Module Button x64 -> can be any module all the Injector needs is the Path to the already loaded Module
 
--> Unlink Module CheckBox -> This unlinks the Module right after execution the Dll in the target
+-> Unlink Module CheckBox x64 -> This unlinks the Module right after execution the Dll in the target
 
--> Unload Mapped Dll -> has some flaws but only works if injected with my Manual Mapper
+-> Unload Mapped Dll x64 -> has some flaws but only works if injected with my Manual Mapper
 
 -> Save/Load/Reset Settings
 
