@@ -42,7 +42,7 @@ Also note this was only tested on Windows 11 Version 23H2 Build 22631.4317 howev
 <text>❯ 
 **Supported Execution Methods:**
 
--> CreateRemoteThread x64/x86
+❯ CreateRemoteThread x64/x86
 
 ❯ NtCreateThreadEx x64/x86
 
