@@ -120,11 +120,11 @@ Oh, I almost forgot to say this, it was my first time doing anything in Qt there
 ###  Installation
 
 **Simply Download the Zip file and run MadInjector.exe which requires UAC.
-Note this is only a stub the real executable is inside the Release Folder however I highly recommend using the Stub since it hides all the ugly files
+Note this is only a stub the real executable is inside the Release Folder however I highly recommend using the Stub since it hides all the ugly files**
 
-When pressing the Inject button the very first time, it will download all of the symbols from the Microsoft symbol server, which takes some time. Do not worry if the injector freezes. 
+**When pressing the Inject button the very first time, it will download all of the symbols from the Microsoft symbol server, which takes some time. Do not worry if the injector freezes.**
 
-If you want to see the progress bar, enable the debug console before pressing the inject button.**
+**If you want to see the progress bar, enable the debug console before pressing the inject button.**
 
 ##  License
 This project is protected under the [MIT-LICENSE]([https://choosealicense.com/licenses](https://choosealicense.com/licenses/mit/)) License. For more details, refer to the [LICENSE]([https://choosealicense.com/licenses/](https://github.com/rickmad11/MadInjector-GUI/blob/master/LICENSE)) file.
